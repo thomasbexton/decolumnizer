@@ -1,5 +1,11 @@
 // import './style.css'
-const icon = require('./icon.png')
+import icon from './icon.png' with { type: 'png'}
+import * as Formatter from './modules/formatter.js'
 
-const sum = require('./modules/module.js')
-console.log(sum(2, 5))
+const input = document.getElementById('text-input')
+const output = document.getElementById('text-output')
+const submit = document.getElementById('submit')
+
+submit.addEventListener('click', () => {
+    output.textContent = Formatter.format(input.value)
+})
