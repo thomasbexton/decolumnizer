@@ -46,7 +46,7 @@ const icon_namespaceObject = __webpack_require__.p + "31d6cfe0d16ae931b73c.png";
 ;// ./src/modules/formatter.js
 //TODO: Add rules as exceptions arise. Refactor when needed.
 function format(str) {
-  return str.replaceAll(/(?<![.])\n(?=[a-z])/gm, ' ');
+  return str.replaceAll(/(?<![.A-Z])\n(?=[a-z0-9])/gm, ' ');
 }
 
 ;// ./src/modules/ui.js
